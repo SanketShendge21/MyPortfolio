@@ -10,13 +10,13 @@ function sendEmail(event) {
   const subject_from = document.querySelector('[name="subject"]').value;
   const message_from = document.querySelector('[name="message"]').value;
 
-  emailjs.send("service_86s9yho", "template_02mwdvd", {
+  emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, {
     from_name: name,
     to_name: "Sanket Shendge",
     reply_to: email,
     subject: subject_from,
     message: message_from,
-  },"V2ZAQlGgPD7oaKWPN").then(function(response) {
+  },process.env.EMAILJS_PUBLIC_KEY).then(function(response) {
     showMailAlert();
   }, function(error) {
     alert("Error sending email. Please try again later.");
