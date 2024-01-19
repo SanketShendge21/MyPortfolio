@@ -1,24 +1,10 @@
 import React from 'react'
-
+import { BiLogoCPlusPlus,BiLogoHtml5,BiLogoGit,BiLogoGithub,BiLogoPhp,BiLogoNodejs,BiLogoJava,BiLogoCss3  } from "react-icons/bi";
+import { SiExpress,SiMongodb,SiMysql,SiPython,SiTailwindcss,SiAdobephotoshop,SiAdobepremierepro     } from "react-icons/si";
+import { RiJavascriptFill,RiReactjsFill,RiBootstrapFill   } from "react-icons/ri";
+import { TbBrandNextjs } from "react-icons/tb";
 
 function Skills() {
-//     const skillsContent = document.getElementsByClassName("skills__content"),
-//   skillsHeader = document.querySelectorAll(".skills__header");
-
-// function toggleSkills() {
-//   let itemClass = this.parentNode.className;
-
-//   for (let i = 0; i < skillsContent.length; i++) {
-//     skillsContent[i].className = "skills__content skills__close";
-//   } 
-//   if (itemClass === "skills__content skills__close") {
-//     this.parentNode.className = "skills__content skills__open";
-//   }
-// }
-
-// skillsHeader.forEach((el) => {
-//   el.addEventListener("click", toggleSkills);
-// });
 
 
   return (
@@ -42,29 +28,25 @@ function Skills() {
                    <h1 className="skills-title">Programming Languages</h1>
                    <div className="skills-list">
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <i className="skills-i" />
                        C
                      </div>
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
-                       Cpp
+                      <BiLogoCPlusPlus className="skills-i" />
+                       C++
                      </div>
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <BiLogoJava className="skills-i" />
                        Java
                      </div>
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <SiPython className="skills-i" />
                        Python
                      </div>
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
-                       R
-                     </div>
-                     {/* <div className="skills-item">
-           <i src="js.png" className="skills-i"/>
-           Javascript
-         </div> */}
+                      <RiJavascriptFill src="js.png" className="skills-i"/>
+                      JavaScript
+                    </div>
                    </div>
                  </div>
 
@@ -73,25 +55,21 @@ function Skills() {
                    <h1 className="skills-title">Frontend Development</h1>
                    <div className="skills-list">
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <BiLogoHtml5 className="skills-i" />
                        HTML
                      </div>
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <BiLogoCss3  className="skills-i" />
                        CSS
                      </div>
-
+                     
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
-                       React Js
-                     </div>
-                     <div className="skills-item">
-                       <i src={""} className="skills-i" />
-                       Next Js
-                     </div>
-                     <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <RiBootstrapFill  className="skills-i" />
                        Bootstrap
+                     </div>
+                     <div className="skills-item">
+                       <SiTailwindcss  className="skills-i" />
+                       Tailwind
                      </div>
                    </div>
                  </div>
@@ -101,17 +79,33 @@ function Skills() {
                    <h1 className="skills-title">Backend Development</h1>
                    <div className="skills-list">
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <SiMysql  className="skills-i" />
                        MySQL
                      </div>
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <BiLogoPhp  className="skills-i" />
+                       PHP
+                     </div>
+                     <div className="skills-item">
+                       <SiMongodb  className="skills-i" />
                        MongoDB
                      </div>
-                     {/* <div className="skills-item">
-                       <i src={express} className="skills-i" />
-                       Express Js
-                     </div> */}
+                     <div className="skills-item">
+                       <SiExpress className="skills-i" />
+                       Express
+                     </div>
+                     <div className="skills-item">
+                       <RiReactjsFill  className="skills-i" />
+                       React
+                     </div>
+                     <div className="skills-item">
+                       <BiLogoNodejs className="skills-i" />
+                       NodeJS
+                     </div>
+                     <div className="skills-item">
+                       <TbBrandNextjs className="skills-i" />
+                       Next Js
+                     </div>
                    </div>
                  </div>
 
@@ -120,20 +114,20 @@ function Skills() {
                    <h1 className="skills-title">Additional skills</h1>
                    <div className="skills-list">
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <BiLogoGit className="skills-i" />
                        Git
                      </div>
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
+                       <BiLogoGithub className="skills-i" />
                        Github
                      </div>
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
-                       Postman
+                       <SiAdobephotoshop  className="skills-i" />
+                       Adobe Photoshop
                      </div>
                      <div className="skills-item">
-                       <i src={""} className="skills-i" />
-                       Kaggle
+                       <SiAdobepremierepro  className="skills-i" />
+                       Adobe Premiere Pro 
                      </div>
                    </div>
                  </div>
