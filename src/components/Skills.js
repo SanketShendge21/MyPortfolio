@@ -2,8 +2,7 @@ import React from 'react'
 import { BiLogoCPlusPlus,BiLogoHtml5,BiLogoGit,BiLogoGithub,BiLogoPhp,BiLogoNodejs,BiLogoJava,BiLogoCss3  } from "react-icons/bi";
 import { SiExpress,SiMongodb,SiMysql,SiPython,SiTailwindcss,SiAdobephotoshop,SiAdobepremierepro     } from "react-icons/si";
 import { RiJavascriptFill,RiReactjsFill,RiBootstrapFill   } from "react-icons/ri";
-import { TbBrandNextjs } from "react-icons/tb";
-
+import { TbBrandNextjs,TbBrandCoinbase } from "react-icons/tb";
 function Skills() {
 
 
@@ -28,7 +27,7 @@ function Skills() {
                    <h1 className="skills-title">Programming Languages</h1>
                    <div className="skills-list">
                      <div className="skills-item">
-                       <i className="skills-i" />
+                       <TbBrandCoinbase className="skills-i" />
                        C
                      </div>
                      <div className="skills-item">
