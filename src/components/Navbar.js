@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react'
 
 function Navbar() {
 
-  const [theme, setTheme] = useState(localStorage.getItem('selected-theme') || 'dark');
+  // const [theme, setTheme] = useState(localStorage.getItem('selected-theme') || 'dark');
 
-  const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    localStorage.setItem('selected-theme', newTheme);
-  };
+  // const toggleTheme = () => {
+  //   const newTheme = theme === 'light' ? 'dark' : 'light';
+  //   setTheme(newTheme);
+  //   localStorage.setItem('selected-theme', newTheme);
+  // };
 
 
   function linkAction(event) {
@@ -59,6 +59,7 @@ function Navbar() {
           nav.classList.toggle('show');
         });
       }
+
   
       const navLink = document.querySelectorAll('.nav__link');   
   
@@ -85,47 +86,47 @@ function Navbar() {
       //   localStorage.setItem('selected-theme', getCurrentTheme());
       //   localStorage.setItem('selected-icon', getCurrentIcon());
       // });
-      const themeButton = document.getElementById('theme-button');
-      const darkTheme = 'dark-theme';
-      const iconTheme = 'uil-moon';
+      // const themeButton = document.getElementById('theme-button');
+      // const darkTheme = 'dark-theme';
+      // const iconTheme = 'uil-moon';
   
-      const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-      const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
+      // const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+      // const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
 
   
-      const handleThemeToggle = () => {
-        document.body.classList.toggle(darkTheme);
-        themeButton.classList.toggle(iconTheme);
-        localStorage.setItem('selected-theme', getCurrentTheme());
-        localStorage.setItem('selected-icon', getCurrentIcon());
-      };
+      // const handleThemeToggle = () => {
+      //   document.body.classList.toggle(darkTheme);
+      //   themeButton.classList.toggle(iconTheme);
+      //   localStorage.setItem('selected-theme', getCurrentTheme());
+      //   localStorage.setItem('selected-icon', getCurrentIcon());
+      // };
   
-      if (themeButton) {
-        themeButton.addEventListener('click', handleThemeToggle);
-      }
+      // if (themeButton) {
+      //   themeButton.addEventListener('click', handleThemeToggle);
+      // }
   
-      const selectedTheme = localStorage.getItem('selected-theme');
-      const selectedIcon = localStorage.getItem('selected-icon');
+      // const selectedTheme = localStorage.getItem('selected-theme');
+      // const selectedIcon = localStorage.getItem('selected-icon');
   
-      if (selectedTheme) {
-        document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-      }
+      // if (selectedTheme) {
+      //   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+      // }
   
-      if (selectedIcon) {
-        themeButton.classList[selectedIcon === 'uil-sun' ? 'add' : 'remove'](iconTheme);
-      }
+      // if (selectedIcon) {
+      //   themeButton.classList[selectedIcon === 'uil-sun' ? 'add' : 'remove'](iconTheme);
+      // }
   
-      return () => {
-        // Clean up event listeners
-        if (themeButton) {
-          themeButton.removeEventListener('click', handleThemeToggle);
-        }
-      };
+    //   return () => {
+    //     // Clean up event listeners
+    //     if (themeButton) {
+    //       themeButton.removeEventListener('click', handleThemeToggle);
+    //     }
+    //   };
     }, []);
   
   return (
     <>
-    <header className={`l-header ${theme === 'dark' ? 'dark-theme' : ''}`}>
+    <header className={`l-header `}>
             <nav className="nav bd-grid">
                 <div>
                     <a href="#home" className="nav__logo">Sanket <span className="home__title-color">Shendge</span></a>
@@ -138,11 +139,11 @@ function Navbar() {
                         <li className="nav__item"><a href="#skills" className="nav__link" onClick={linkAction}>Skills</a></li>
                         <li className="nav__item"><a href="#project" className="nav__link" onClick={linkAction}>Projects</a></li>
                         <li className="nav__item"><a href="#contact" className="nav__link" onClick={linkAction}>Contact</a></li>
-                        <li className="nav__item"><i className={`uil ${
+                        {/* <li className="nav__item"><i className={`uil ${
                     theme === 'dark' ? 'uil-sun' : 'uil-moon'
                   } `}
                   id="theme-button"
-                  onClick={toggleTheme}></i></li>
+                  onClick={toggleTheme}></i></li> */}
                     </ul>
                 </div>
                 <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
