@@ -1,58 +1,57 @@
-import React from 'react'
-// import { Link } from 'react-router-dom';
-import Swal from 'sweetalert2'
+import ProjectContainer from '../components/ProjectContainer'
+import './Project.css'
 
-function Projects() {
-    function showIntAlert(event) {
-        event.preventDefault();
-        Swal.fire({
-          icon: 'info',
-          title: 'Oops!',
-          text: 'Sorry, this project is not available for viewing at the moment.',
-          confirmButtonText: 'Got it'
-        });
-      }
+const projects = [
+    // projects can be added an removed
+    // if there are no projects, Projects section won't show up
+    {
+      name: 'Threads Unveiled',
+      description:
+        'Threads Unveiled is a sophisticated e-commerce platform developed with Next.js and MongoDB.The use of MongoDB ensures efficient database management, providing customers with a diverse and visually appealing selection of high-quality fashion products.',
+      stack: ['NextJS', 'MongoDB',],
+      img:"/assets/img/threadsunveiled.png",
+      sourceCode: 'https://github.com/SanketShendge21/ThreadsUnveiled',
+      livePreview: 'https://threadsunveiled.vercel.app/',
+    },
+    {
+      name: 'TextUtils',
+      description:
+        'TextUtils is a versatile text converter application designed for efficiency. Whether converting case formats,copy to clipboard, speak, TextUtils streamlines text manipulation tasks. Its user-friendly interface and robust functionalities make it an indispensable tool for anyone seeking quick and effective text transformations.',
+      stack: ['ReactJS', 'npm'],
+      img:"/assets/img/TextUtils.png",
+      sourceCode: 'https://github.com/SanketShendge21/TextUtils-React',
+      livePreview:'https://sanketshendge21.github.io/TextUtils-React/',
+    },
+    {
+      name: 'iNotebook',
+      description:
+        'iNotebook is an intuitive note-taking application designed for seamless organization and accessibility. With a user-friendly interface, it allows users to effortlessly jot down ideas, create to-do lists, and capture thoughts on the go',
+      stack: ['ReactJS','Node','Express','MongoDB'],
+      img:"/assets/img/inotebook.png",
+      sourceCode: 'https://github.com/SanketShendge21/iNotebook_MERN',
+    },
+    {
+      name: 'Virya',
+      description:
+        'Virya, born during the COVID-19 pandemic, stands as an essential E-learning platform. Crafted to adapt to the changing educational landscape, it ensures uninterrupted learning experiences.',
+      stack: ['HTML','CSS','JavaScript', 'MySQL', 'PHP'],
+      img:"/assets/img/virya.png",
+      sourceCode: 'https://github.com/SanketShendge21/Virya-E-Learning',
+    },
+  ]
+const Projects = () => {
+
+
   return (
-    <>
-    {/* <!--===== Project =====--> */}
-    <section className="project section" id="project">
-            <h2 className="section-title">Projects</h2>
+    <section id='projects' className='section projects'>
+      <h1 className='section-title'>Projects</h1>
 
-            <div className="project__container bd-grid project__img__wrap">
-                <div className="project-image-container">
-                <a href="https://github.com/SanketShendge21/Virya-E-Learning" className="project__img" target="_blank" rel="noopener noreferrer">
-                    <img src="assets/img/Virya_logo.png" alt="Unable to Load" />
-                    <p className="project__img__description"><b>Virya E-learning Platform</b><br /><br />The physical classroom learning nowadays is no longer applicable for the current younger generations due to COVID-19 Crisis. Internet and distance learning which is generally known as online education plays a vital roles in the country’s education system.
-                    </p>
-
-                </a>
-                </div>
-            
-                <div className="project-image-container">
-                    <a href="https://github.com/SanketShendge21/Canteen-Management-System" className="project__img" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/canteen.jpg" alt="Unable to Load" />
-                        
-                        <p className="project__img__description"><b>Canteen Management System</b> <br /><br />This project, Canteen Ordering System, facilitates the end-users to register online, read and pick the food from the e-menu card, and order food online by just choosing the food that the user wants to have using the website.</p>
-                    </a>
-                </div>
-                <div className="project-image-container">
-                    <a href='/' className="project__img" target="_self" onClick={(event) => showIntAlert(event)} rel="noopener noreferrer">
-                        <img src="assets/img/url_shortner.jpeg" alt="Unable to Load" />
-                        <p className="project__img__description"><b>URL Shortening Website (Internship)</b> <br /><br />Implemented custom URL shortening logic, enabling users tocreate concise and shareable links. Designed a responsive interface for users togenerate, manage, and track shortened URLs.</p>
-                    </a>
-                </div>
-                {/* <!-- <a href="" className="project__img">
-                    <img src="assets/img/project4.jpg" alt="">
-                </a>
-                <a href="" className="project__img">
-                    <img src="assets/img/project5.jpg" alt="">
-                </a>
-                <a href="" className="project__img">
-                    <img src="assets/img/project6.jpg" alt="">
-                </a> --> */}
-            </div>
-        </section>
-    </>
+      <div className='projects__grid'>
+        {projects.map((project) => (
+          <ProjectContainer  project={project} />
+        ))}
+      </div>
+    </section>
   )
 }
 

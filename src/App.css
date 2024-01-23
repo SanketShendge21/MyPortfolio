@@ -1,6 +1,7 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -9,8 +10,9 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --first-color: #DC3545; /* Red */
-  --second-color: #6C757D; /* Slate Gray */
-  --body-color: #F8F9FA; /* Light Gray */
+  --second-color: #6C757D; 
+  --body-color: black; /* Light Gray */
+  --text-color-light:#939998; /* Dark Gray
   
   /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
@@ -47,94 +49,7 @@ body {
 
   /* BODY DARK THEME */
 
-  body.dark-theme {
-    /* HSL color mode */
-    --first-color: #C82333; /* Dark Red */
-    --second-color: #6C757D; /* Slate Gray */
-    --body-color: #212529; /* Almost Black */
-    --title-color: hsl(var(--hue-color), 8%, 95%);
-    --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 75%);
-    --input-color: hsl(var(--hue-color), 29%, 16%);
-    /* --body-color: hsl(var(--hue-color), 28%, 12%); */
-    --container-color: hsl(var(--hue-color), 29%, 16%);
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
-  }
 
-body.dark-theme h1,
-body.dark-theme h2,
-body.dark-theme h3,
-body.dark-theme h4,
-body.dark-theme p, 
-body.dark-theme .section-title,
-body.dark-theme .section__subtitle,
-body.dark-theme .qualification__tabs,
-body.dark-theme .qualification__subtitle,
-body.dark-theme .home__social-icon{
-    color: #fff; /* Set the text color for headings and paragraphs */
-}
-
-body.dark-theme .footer{
-  background-color: var(--body-color);
-}
-
-body.dark-theme .button {
-  background-color: #ffc107; /* Set the initial background color to yellow */
-  color: #000; /* Set the text color */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth animation */
-}
-
-body.dark-theme .button:hover{
-  
-  background-color: #ffdb58; /* Change to a shade of yellow for hover effect */
-  box-shadow: 0px 10px 36px rgba(230, 124, 4, 0.30); /* Apply box shadow on hover */
-}
-
-
-body.dark-theme #theme-button{
-  color: #fff;
-}
-body.dark-theme #theme-button:hover{
-  color: var(--first-color)
-}
-
-body.dark-theme .skills__number{
-  color: #fff
-}
-
-body.dark-theme .home__social-icon:hover{
-  color: var(--first-color);
-}
-body.dark-theme .project-image-container{
-  border: 2px solid #fff;
-}
-
-body.dark-theme .change-theme{
-  color: #fff;
-}
-
-body.dark-theme .l-header {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: var(--body-color);
-  box-shadow: none;
-}
-
-body.dark-theme .nav__link {
-  color: #fff; /* Set the text color to #fff in dark mode */
-}
-
-body.dark-theme .nav__logo {
-  color: #fff; /* Set the text color to #fff in dark mode */
-}
-
-body.dark-theme .nav__toggle{
-  color: #fff;
-}
 /*========== Button Dark/Light ==========*/
 .nav__btns {
   display: flex;
@@ -273,6 +188,8 @@ img {
   z-index: var(--z-fixed);
   background-color: var(--body-color);
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  
+  background-color: black;
 }
 
 
@@ -428,6 +345,7 @@ img {
 
 .about__subtitle {
   margin-bottom: var(--mb-2);
+  
 }
 
 .about__img {
@@ -456,6 +374,14 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
+  
+  transition: var(--body-color) 0.3s ease;
+}
+.wrapper:hover{
+  -webkit-box-shadow:0px 0px 75px 25px rgba(255,46,140,0.34);
+  -moz-box-shadow: 0px 0px 75px 25px rgba(255,46,140,0.34);
+  box-shadow: 0px 0px 75px 25px rgba(255,46,140,0.34);
+  cursor: pointer;
 }
 .skill-bx {
   position: relative;
@@ -545,85 +471,69 @@ img {
 
 
 
-/* ===== project =====*/
-.project__container {
-  row-gap: 2rem;
+.gallery {
+  display: flex;
+  background-color:
+    var(--background);
+  gap: 16px;
+  scale: 1.6;
 }
 
-.project__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: .5rem;
-  overflow: hidden;
-  /* width: 640px;
-  height: 426px;
-  object-fit: scale-down; */
-}
-
-.project__img img {
-  transition: 1s;
-}
-
-.project__img img:hover {
-  transform: scale(1.1);
-}
-
-.project__img__wrap{
+.card {
   position: relative;
-}
-
-.project-image-container{
-  position: relative;
-  display: inline-block;
-  row-gap: 2rem;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: .5rem;
+  left: 0px;
+  width: 140px;
+  height: 160px;
+  background-color:
+    var(--background);
+  border-radius: 8px;
+  transition: 1000ms all;
+  transform-origin:
+    center left;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+  outline: 1px solid var(--background);
   overflow: hidden;
 }
 
-.project-image-container:hover .project__img__description {
-  display: block;
+.card img {
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-
-.project__img__description{
-  opacity: 0;
-  position: absolute;
-  display: none;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  padding-top:8rem;
-  /* background: rgba(29, 106, 154, 0.72); */
-  background: var(--first-color);
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  line-height: normal;
-  /* transition effect. not necessary */
-  transition: opacity .2s, visibility .2s;
-}
-
-.project__img__wrap:hover .project__img__description {
-  visibility: visible;
-  opacity: 1;
-}
-
-.project__explore__button {
-  background-color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+.card:hover {
   cursor: pointer;
-  font-size: 16px;
+  transform: scale(1.15);
+  box-shadow: 0 0 20px #00fffc;
+  margin: 5px;
 }
 
-.project__explore__button:hover {
-  background-color: #333;
-  color: #fff;
+.card:hover figcaption {
+  font-size: 0.6rem;
+  position: absolute;
+  height: 80px;
+  width: 160px;
+  display: flex;
+  align-items: end;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0) 100%);
+  color: white;
+  left: 0px;
+  bottom: 0px;
+  padding-left: 12px;
+  padding-bottom: 10px;
+}
+
+.card:hover~.card {
+  font-weight: bold;
+  cursor: pointer;
+  transform: translateX(22px);
+}
+@media screen and (min-width: 576px) {
+  .gallery{
+    flex-direction: column;
+  }
 }
 
 /*==================== QUALIFICATION ====================*/
@@ -657,17 +567,20 @@ img {
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
   column-gap: 1.5rem;
+  color: var(--text-color-light);
 }
 
 .qualification__title {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+  color: var(--text-color-light);
 }
 
 .qualification__subtitle {
   display: inline-block;
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-1);
+  color: var(--text-color-light);
 }
 
 .qualification__calendar {

@@ -13,6 +13,7 @@ import Projects from './components/Projects';
 import Qualification from './components/Qualification';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Particle from './components/Particle.js';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
   return (
     <>
     <Navbar  />
+    <Particle></Particle>
     <Home />
     <About />
     <Skills />
