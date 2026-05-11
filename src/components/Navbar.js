@@ -1,158 +1,165 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { m, AnimatePresence } from 'framer-motion';
 
-// import { Icon } from '@iconify/react';
+const navLinks = [
+  { name: 'Home', id: 'home' },
+  { name: 'About', id: 'about' },
+  { name: 'Skills', id: 'skills' },
+  { name: 'Projects', id: 'projects' },
+  { name: 'Contact', id: 'contact' }
+];
 
-function Navbar() {
+const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
 
-  // const [theme, setTheme] = useState(localStorage.getItem('selected-theme') || 'dark');
+  // Handle scroll for sticky pill background
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  // const toggleTheme = () => {
-  //   const newTheme = theme === 'light' ? 'dark' : 'light';
-  //   setTheme(newTheme);
-  //   localStorage.setItem('selected-theme', newTheme);
-  // };
+  // Intersection Observer for Active Links
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-40% 0px -60% 0px', // Trigger when section passes the upper middle of the screen
+      threshold: 0
+    };
 
+    const handleIntersect = (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
 
-  function linkAction(event) {
-    event.preventDefault();
-  
-    const targetId = event.target.getAttribute('href');
-  
-    if (targetId) {
-      const section = document.querySelector(targetId);
-  
-      if (section) {
-        window.scrollTo({
-          top: section.offsetTop,
-          behavior: 'smooth'
-        });
+    const observer = new IntersectionObserver(handleIntersect, observerOptions);
+    
+    navLinks.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
       }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
     }
-  
-    setIsMenuOpen(false); // Close the menu after clicking a link
-  }
-  
-  
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    // const [theme, setTheme] = useState(localStorage.getItem('selected-theme') || 'light');
-  
-    const toggleMenu = () => {
-      setIsMenuOpen(!isMenuOpen);
-    };
-  
-    const closeMenu = () => {
-      setIsMenuOpen(false);
-    };
-  
-    // const toggleTheme = () => {
-    //   const newTheme = theme === 'light' ? 'dark' : 'light';
-    //   setTheme(newTheme);
-    //   localStorage.setItem('selected-theme', newTheme);
-    // };
-  
-    useEffect(() => {
-      const toggle = document.getElementById('nav-toggle');
-      const nav = document.getElementById('nav-menu');
-  
-      if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-          nav.classList.toggle('show');
-        });
-      }
+  }, [isMobileMenuOpen]);
 
-  
-      const navLink = document.querySelectorAll('.nav__link');   
-  
-      navLink.forEach(n => n.addEventListener('click', linkAction));
-  
-      // const themeButton = document.getElementById('theme-button');
-      // const darkTheme = 'dark-theme';
-      // const iconTheme = 'uil-sun';
-  
-      // const selectedTheme = localStorage.getItem('selected-theme');
-      // const selectedIcon = localStorage.getItem('selected-icon');
-  
-      // const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-      // const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
-  
-      // if (selectedTheme) {
-      //   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-      //   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
-      // }
-  
-      // themeButton.addEventListener('click', () => {
-      //   document.body.classList.toggle(darkTheme);
-      //   themeButton.classList.toggle(iconTheme);
-      //   localStorage.setItem('selected-theme', getCurrentTheme());
-      //   localStorage.setItem('selected-icon', getCurrentIcon());
-      // });
-      // const themeButton = document.getElementById('theme-button');
-      // const darkTheme = 'dark-theme';
-      // const iconTheme = 'uil-moon';
-  
-      // const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-      // const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
-
-  
-      // const handleThemeToggle = () => {
-      //   document.body.classList.toggle(darkTheme);
-      //   themeButton.classList.toggle(iconTheme);
-      //   localStorage.setItem('selected-theme', getCurrentTheme());
-      //   localStorage.setItem('selected-icon', getCurrentIcon());
-      // };
-  
-      // if (themeButton) {
-      //   themeButton.addEventListener('click', handleThemeToggle);
-      // }
-  
-      // const selectedTheme = localStorage.getItem('selected-theme');
-      // const selectedIcon = localStorage.getItem('selected-icon');
-  
-      // if (selectedTheme) {
-      //   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-      // }
-  
-      // if (selectedIcon) {
-      //   themeButton.classList[selectedIcon === 'uil-sun' ? 'add' : 'remove'](iconTheme);
-      // }
-  
-    //   return () => {
-    //     // Clean up event listeners
-    //     if (themeButton) {
-    //       themeButton.removeEventListener('click', handleThemeToggle);
-    //     }
-    //   };
-    }, []);
-  
   return (
     <>
-    <header className={`l-header `}>
-            <nav className="nav bd-grid">
-                <div>
-                    <a href="#home" className="nav__logo">Sanket <span className="home__title-color">Shendge</span></a>
-                </div>
+      <m.header 
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-[600px] flex justify-center"
+      >
+        <div 
+          className={`w-full flex justify-between items-center px-4 py-3 rounded-[50px] transition-all duration-300 ease-in-out border ${
+            scrolled 
+              ? 'bg-[rgba(2,6,23,0.75)] backdrop-blur-[16px] border-[rgba(255,255,255,0.08)] shadow-lg' 
+              : 'bg-transparent border-transparent'
+          }`}
+        >
+          {/* Square Logo Initials */}
+          <a href="#home" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 bg-accent text-bg font-sans font-extrabold flex items-center justify-center rounded-md group-hover:bg-accent/80 transition-colors">
+              SS
+            </div>
+          </a>
 
-                <div className={`nav__menu ${isMenuOpen ? 'show' : ''}`} id="nav-menu">
-                    <ul className="nav__list">
-                        <li className="nav__item"><a href="#home" className="nav__link" onClick={closeMenu}>Home</a></li>
-                        <li className="nav__item"><a href="#about" className="nav__link" onClick={linkAction}>About</a></li>
-                        <li className="nav__item"><a href="#skills" className="nav__link" onClick={linkAction}>Skills</a></li>
-                        <li className="nav__item"><a href="#project" className="nav__link" onClick={linkAction}>Projects</a></li>
-                        <li className="nav__item"><a href="#contact" className="nav__link" onClick={linkAction}>Contact</a></li>
-                        {/* <li className="nav__item"><i className={`uil ${
-                    theme === 'dark' ? 'uil-sun' : 'uil-moon'
-                  } `}
-                  id="theme-button"
-                  onClick={toggleTheme}></i></li> */}
-                    </ul>
-                </div>
-                <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
-                    <i className='bx bx-menu'></i>
-                </div>
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-6">
+            {navLinks.map((item) => (
+              <a 
+                key={item.id} 
+                href={`#${item.id}`} 
+                className={`relative py-1 text-sm font-semibold transition-colors duration-200 group 
+                  after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] 
+                  after:bg-accent after:origin-left after:transition-transform after:duration-300 
+                  ${activeSection === item.id ? 'text-accent after:scale-x-100' : 'text-text-secondary hover:text-accent after:scale-x-0 group-hover:after:scale-x-100'}`}
+              >
+                {item.name}
+              </a>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Toggle */}
+          <button 
+            className="md:hidden text-text-primary p-2 focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </m.header>
+
+      {/* Full-Screen Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <m.div 
+            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            animate={{ opacity: 1, backdropFilter: "blur(16px)" }}
+            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[100] bg-[rgba(2,6,23,0.95)] flex flex-col justify-center items-center"
+          >
+            <button 
+              className="absolute top-8 right-8 text-text-primary p-2 hover:text-accent transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+            
+            <nav className="flex flex-col gap-8 text-center">
+              {navLinks.map((item, idx) => (
+                <m.a 
+                  key={item.id}
+                  href={`#${item.id}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * idx }}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`text-3xl font-display font-bold transition-colors ${
+                    activeSection === item.id ? 'text-accent' : 'text-text-primary hover:text-accent'
+                  }`}
+                >
+                  {item.name}
+                </m.a>
+              ))}
+              <m.a 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * navLinks.length }}
+                href="/assets/Sanket_Shendge.pdf" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="mt-8 px-8 py-3 text-lg font-bold text-bg bg-accent rounded-full hover:bg-accent/80 transition-all"
+              >
+                Resume
+              </m.a>
             </nav>
-        </header>
+          </m.div>
+        )}
+      </AnimatePresence>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
