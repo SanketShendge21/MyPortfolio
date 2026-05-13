@@ -4,23 +4,43 @@ import { fadeUpVariant, staggerContainer, lineExpandVariant } from '../lib/anima
 
 // Curated list of premium engineering skills (removed basic/assumed skills)
 const coreSkills = [
-  { name: "React", category: "Frontend" },
+  // Languages
+  { name: "Python", category: "Language" },
+  { name: "TypeScript", category: "Language" },
+  { name: "JavaScript", category: "Language" },
+  { name: "C#", category: "Language" },
+  { name: "Java", category: "Language" },
+  { name: "C/C++", category: "Language" },
+  // Frontend
+  { name: "React.js", category: "Frontend" },
   { name: "Next.js", category: "Frontend" },
-  { name: "TypeScript", category: "Frontend" },
+  { name: "Redux", category: "Frontend" },
+  { name: "React Three Fiber", category: "Frontend" },
   { name: "Tailwind CSS", category: "Frontend" },
-  { name: "Framer Motion", category: "Frontend" },
+  // Backend & APIs
   { name: "Node.js", category: "Backend" },
-  { name: "Express", category: "Backend" },
-  { name: "PostgreSQL", category: "Backend" },
-  { name: "MongoDB", category: "Backend" },
-  { name: "REST APIs", category: "Backend" },
-  { name: "AWS", category: "Tools" },
-  { name: "Docker", category: "Tools" },
-  { name: "Vercel", category: "Tools" },
-  { name: "Jest", category: "Tools" },
+  { name: "FastAPI", category: "Backend" },
+  { name: "ASP.NET Razor", category: "Backend" },
+  { name: "Microservices", category: "Backend" },
+  { name: "RESTful APIs", category: "Backend" },
+  { name: "WebSocket", category: "Backend" },
+  // AI / ML
+  { name: "LLM Integration", category: "AI / ML" },
+  { name: "RAG Pipeline", category: "AI / ML" },
+  { name: "NLP", category: "AI / ML" },
+  { name: "Machine Learning", category: "AI / ML" },
+  // Databases
+  { name: "PostgreSQL", category: "Database" },
+  { name: "MongoDB", category: "Database" },
+  { name: "MySQL", category: "Database" },
+  // Cloud & DevOps
+  { name: "AWS", category: "Cloud/DevOps" },
+  { name: "GCP", category: "Cloud/DevOps" },
+  { name: "Azure", category: "Cloud/DevOps" },
+  { name: "Docker", category: "Cloud/DevOps" },
 ];
 
-const learningSkills = ["Go (Golang)", "GraphQL", "System Architecture"];
+const learningSkills = ["Agentic AI Workflows", "Distributed Systems", "Vector Databases"];
 
 const TechIcon = () => (
   <svg className="w-4 h-4 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -33,8 +53,8 @@ function Skills() {
   const marqueeItems = [...coreSkills, ...coreSkills];
 
   return (
-    <m.section 
-      id="skills" 
+    <m.section
+      id="skills"
       className="py-24 bg-bg overflow-x-hidden border-t border-border/50 relative z-10"
       variants={staggerContainer}
       initial="hidden"
@@ -45,7 +65,7 @@ function Skills() {
         <m.div variants={fadeUpVariant}>
           <h2 className="text-[2.5rem] font-sans font-extrabold text-text-primary tracking-tight inline-block relative pb-2">
             Engineering Arsenal
-            <m.span 
+            <m.span
               variants={lineExpandVariant}
               className="absolute bottom-0 left-0 w-full h-[3px] bg-accent origin-left"
             />
@@ -61,8 +81,8 @@ function Skills() {
 
         <div className="animate-marquee gap-6 px-3">
           {marqueeItems.map((skill, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className="flex items-center bg-surface px-4 py-2 rounded-full whitespace-nowrap border border-border shadow-sm hover:border-accent transition-colors cursor-default"
             >
               <TechIcon />
@@ -77,20 +97,20 @@ function Skills() {
         </div>
       </div>
 
-      {/* Currently Learning Section */}
-      <m.div 
+      {/* Current Focus Section */}
+      <m.div
         variants={fadeUpVariant}
         className="mt-20 text-center max-w-4xl mx-auto px-6"
       >
         <h3 className="text-sm font-mono font-bold text-text-secondary mb-6 flex items-center justify-center gap-2 uppercase tracking-widest">
           <span className="w-2 h-2 rounded-full bg-amber animate-pulse"></span>
-          Currently Learning
+          Current Focus
         </h3>
-        
+
         <div className="flex flex-wrap justify-center gap-4">
           {learningSkills.map((skill, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className="px-5 py-2.5 rounded-full border border-amber/30 bg-amber/10 text-amber font-mono text-sm font-bold shadow-[0_0_20px_rgba(245,158,11,0.1)] transform transition-transform hover:scale-105 cursor-default"
             >
               {skill}

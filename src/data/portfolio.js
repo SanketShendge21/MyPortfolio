@@ -38,6 +38,14 @@ export const workExperience = [
     },
     projects: [
       {
+        title: "Enterprise WCAG Compliance & Deployment Fix",
+        // SITUATION: An enterprise B2B/B2C application had 50+ unresolved accessibility violations and a recurring deployment failure caused by dynamic content injection timing on Azure.
+        // ACTION: Systematically remediated WCAG issues across 8+ screens in C#/ASP.NET Razor. Diagnosed the deployment failure as a race condition between Azure's CDN cache and client-side hydration — implemented a MutationObserver solution to decouple injection timing from load order.
+        // RESULT: Achieved full WCAG compliance and eliminated 100% of recurring deployment failures, earning the MMA Award for Client Value Creation.
+        description: "Enterprise B2B/B2C application had 50+ unresolved accessibility violations and a recurring Azure deployment failure from injection timing issues. Remediated WCAG issues across 8+ screens in C#/ASP.NET Razor and implemented a MutationObserver solution to decouple injection timing from load order. Achieved full WCAG compliance and eliminated 100% of deployment failures — awarded MMA for Client Value Creation.",
+        tech: ["C#", "ASP.NET Razor", "WCAG", "Azure", "MutationObserver", "CI/CD"],
+      },
+      {
         title: "AI-Powered Predictive Maintenance Platform",
         // SITUATION: Industrial fleet operators relied on batch log processing, causing diagnostic delays of 15+ minutes.
         // ACTION: Engineered a real-time diagnostic pipeline using FastAPI microservices, LLaMA 3.2, and a dual RAG architecture (structured + unstructured retrieval) with WebSocket streaming — chosen over REST polling to eliminate latency overhead.
@@ -52,14 +60,6 @@ export const workExperience = [
         // RESULT: Reduced manual fleet coordination time from 30 minutes to under 5 minutes per incident — an 83% reduction.
         description: "Manual fleet coordination during blast-zone failures at mining sites consumed 30+ minutes per incident. Built a 3D spatial interface with Next.js and React Three Fiber, integrating an LLM-driven shutdown sequencer to automate multi-step coordination. Cut fleet coordination time from 30 minutes to under 5 minutes — an 83% reduction.",
         tech: ["Next.js", "React Three Fiber", "LLM", "AR", "JavaScript"],
-      },
-      {
-        title: "Enterprise WCAG Compliance & Deployment Fix",
-        // SITUATION: An enterprise B2B/B2C application had 50+ unresolved accessibility violations and a recurring deployment failure caused by dynamic content injection timing on Azure.
-        // ACTION: Systematically remediated WCAG issues across 8+ screens in C#/ASP.NET Razor. Diagnosed the deployment failure as a race condition between Azure's CDN cache and client-side hydration — implemented a MutationObserver solution to decouple injection timing from load order.
-        // RESULT: Achieved full WCAG compliance and eliminated 100% of recurring deployment failures, earning the MMA Award for Client Value Creation.
-        description: "Enterprise B2B/B2C application had 50+ unresolved accessibility violations and a recurring Azure deployment failure from injection timing issues. Remediated WCAG issues across 8+ screens in C#/ASP.NET Razor and implemented a MutationObserver solution to decouple injection timing from load order. Achieved full WCAG compliance and eliminated 100% of deployment failures — awarded MMA for Client Value Creation.",
-        tech: ["C#", "ASP.NET Razor", "WCAG", "Azure", "MutationObserver", "CI/CD"],
       },
     ],
   },
@@ -82,17 +82,6 @@ export const workExperience = [
 
 export const personalProjects = [
   {
-    name: "Threads Unveiled",
-    // SITUATION: Small clothing brands had no affordable, high-performance storefront — existing templates were bloated and slow.
-    // ACTION: Architected a headless e-commerce platform with Next.js SSR for SEO and MongoDB aggregation pipelines for real-time inventory — choosing server-side rendering over CSR to optimize for search engine crawlability.
-    // RESULT: Sub-2s LCP on mobile, 200+ organic visitors within 2 weeks of launch.
-    description: "Small clothing brands lacked affordable, performant storefronts — existing templates shipped 3MB+ bundles. Architected a headless e-commerce platform with Next.js SSR and MongoDB aggregation pipelines, choosing server rendering over CSR to maximize SEO crawlability. Achieved sub-2s LCP on mobile and acquired 200+ organic visitors within 2 weeks of launch.",
-    stack: ["Next.js", "MongoDB", "Tailwind CSS"],
-    sourceCode: "https://github.com/SanketShendge21/ThreadsUnveiled",
-    livePreview: "https://threadsunveiled.vercel.app/",
-    featured: true,
-  },
-  {
     name: "Healthcare IoT Monitor",
     // SITUATION: Rural clinics lacked real-time multi-vital monitoring, relying on periodic manual checks that delayed early disease detection.
     // ACTION: Designed an IoT device integrating 4 biometric sensors with an ML classification pipeline (Python, time-series analysis) deployed on AWS — published the architecture as a peer-reviewed paper in IJNRD.
@@ -104,7 +93,18 @@ export const personalProjects = [
     publication: {
       title: "Revolutionizing Healthcare Delivery: A Comprehensive Review of Chatbot-enabled Systems Integrating Real-time Sensor Data and Cloud Computing",
       journal: "IJNRD, Vol. 8, Issue 11, Nov 2023",
-    },
+    }
+  },
+  {
+    name: "Threads Unveiled",
+    // SITUATION: Small clothing brands had no affordable, high-performance storefront — existing templates were bloated and slow.
+    // ACTION: Architected a headless e-commerce platform with Next.js SSR for SEO and MongoDB aggregation pipelines for real-time inventory — choosing server-side rendering over CSR to optimize for search engine crawlability.
+    // RESULT: Sub-2s LCP on mobile, 200+ organic visitors within 2 weeks of launch.
+    description: "Small clothing brands lacked affordable, performant storefronts — existing templates shipped 3MB+ bundles. Architected a headless e-commerce platform with Next.js SSR and MongoDB aggregation pipelines, choosing server rendering over CSR to maximize SEO crawlability. Achieved sub-2s LCP on mobile and acquired 200+ organic visitors within 2 weeks of launch.",
+    stack: ["Next.js", "MongoDB", "Tailwind CSS"],
+    sourceCode: "https://github.com/SanketShendge21/ThreadsUnveiled",
+    livePreview: "https://threadsunveiled.vercel.app/",
+    featured: true,
   },
   {
     name: "iNotebook",
@@ -157,7 +157,8 @@ export const timelineData = [
 ];
 
 export const certifications = [
-  "AWS Cloud Practitioner",
-  "Google Cloud Digital Leader",
-  "Microsoft Azure Fundamentals (AZ-900)",
+  "AWS Certified Cloud Practitioner",
+  "Google Certified Associate Cloud Engineer",
+  "Microsoft Certified Azure Fundamentals (AZ-900)",
+  "Goethe-Zertifikat A2 (German Language)",
 ];

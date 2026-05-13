@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Sanket Shendge
+**Software Engineer | Full Stack | AI/ML Integration**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Portfolio](https://img.shields.io/badge/Live_Portfolio-sanketshendge.com-13FFAA?style=for-the-badge)](https://sanketshendge.com/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/sanket-shendge/)
+[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail)](mailto:sanketshendge21052002@gmail.com)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 👨‍💻 Executive Summary
 
-### `npm start`
+Software Engineer at Accenture with experience shipping production software across the full SDLC — from FastAPI microservices and LLM-driven RAG pipelines to enterprise C#/.NET applications serving B2B and B2C users. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I specialize in engineering high-performance, accessible web applications and real-time AI-integrated systems. I am triple cloud-certified (AWS, GCP, Azure) and a published author in AI-driven healthcare architectures. My focus is on bridging the gap between cutting-edge AI capabilities and highly scalable, fault-tolerant web infrastructure.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🏆 Key Professional Highlights
 
-### `npm test`
+* **Enterprise Impact:** Awarded the *MMA Award for Client Value Creation* at Accenture for systematically resolving 50+ WCAG accessibility violations across an enterprise app and eliminating critical CI/CD deployment failures on Azure via custom MutationObserver logic.
+* **AI & Real-Time Systems:** Engineered a sub-2.5-minute real-time diagnostic pipeline using FastAPI, LLaMA 3.2, and a dual RAG architecture with WebSocket streaming for industrial fleets.
+* **Spatial Computing & Automation:** Prototyped a 3D AR interface using Next.js and React Three Fiber with an LLM-driven safety sequencer, reducing industrial fleet coordination time by 83%.
+* **Academic Publication:** Co-authored a peer-reviewed paper in IJNRD (Nov 2023) detailing a real-time IoT healthcare monitoring architecture integrated with NLP chatbots and AWS cloud infrastructure.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Core Engineering Arsenal
 
-### `npm run build`
+* **Languages:** Python, TypeScript, JavaScript, C#, Java, C/C++
+* **Frontend:** React.js, Next.js, Redux, React Three Fiber, Tailwind CSS
+* **Backend:** Node.js, FastAPI, ASP.NET Razor, Microservices, WebSocket, REST APIs
+* **AI/ML:** LLM Integration, RAG Pipelines, NLP, Machine Learning
+* **Databases:** PostgreSQL, MongoDB, MySQL
+* **Cloud & Architecture:** AWS, GCP, Azure, Docker, CI/CD, Distributed Systems, Agentic AI Workflows
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 💼 Professional Experience
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Associate Software Engineer | Accenture *(Sept 2024 – Present)*
+* Develop and remediate enterprise web applications built on React.js and C#/.NET, ensuring strict WCAG compliance and secure coding standards.
+* Architect real-time predictive maintenance pipelines and automation tools utilizing Large Language Models (LLMs) and advanced search strategies.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Software Developer Intern | CodeClause *(Feb 2023 – May 2023)*
+* Designed and delivered a full-stack Employee Management System using Python and JavaScript, implementing RESTful API endpoints and robust role-based access control.
 
-### `npm run eject`
+## 📜 Certifications
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* **AWS** Certified Cloud Practitioner *(2024–2027)*
+* **Google** Certified Associate Cloud Engineer *(2025–2028)*
+* **Microsoft** Certified Azure Fundamentals (AZ-900) *(2025)*
+* **Goethe-Zertifikat A2** (German)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+*Note: This specific repository contains the source code for my professional React portfolio website. Feel free to explore the code to see how I build, optimize, and deploy high-performance frontend applications.*
