@@ -1,0 +1,72 @@
+Sanket Shendge 
+Software Engineer | Full Stack | AI/ML Integration 
++91-9175744363 | sanketshendge21052002@gmail.com| LinkedIn | GitHub | Portfolio 
+ 
+SUMMARY 
+ 
+Software Engineer with 1.5 years of experience at Accenture designing and delivering scalable software solutions 
+across the full SDLC. Proficient in Python, React.js, and cloud-native architectures (AWS, GCP, Azure) with hands-
+on experience in LLM integration, RAG pipelines, and real-time systems. Triple cloud-certified with a peer-
+reviewed publication in AI-driven healthcare systems. MMA Award recipient for Client Value Creation. Strong 
+foundation in OOP, SOLID principles, RESTful API design, microservices, and secure coding practices. 
+TECHNICAL SKILLS 
+ 
+Languages: Python, JavaScript, TypeScript, C#, Java, C/C++, SQL,  
+Frontend: React.js, Next.js, Redux, React Three Fiber, HTML5, CSS3 
+Backend & APIs: FastAPI, ASP.NET Razor, RESTful APIs, Microservices, WebSocket, Node.js 
+AI / ML: LLM Integration (LLaMA 3.2), RAG Pipeline, Prompt Engineering, NLP, Machine Learning 
+Databases: MongoDB, MySQL, PostgreSQL, Relational DB Design 
+Cloud & DevOps: AWS, GCP, Azure, Terraform, CI/CD Pipelines, Docker, Git, Azure Policies 
+Practices: OOP, SOLID Principles, WCAG 
+EXPERIENCE 
+ 
+Associate Software Engineer  ·  Accenture, Pune Sept 2024 – Present 
+Award: MMA — Core Values: Client Value Creation  (Sept 2025): Recognised for resolving 50+ WCAG 
+accessibility violations across 8+ screens on an enterprise client application, achieving full compliance and 
+delivering measurable improvement in the client's digital accessibility standards. 
+ Developed and remediated enterprise B2B and B2C web applications built on React.js, C#, and ASP.NET Razor 
+resolving 50+ accessibility violations across 12+ screens to achieve full WCAG compliance, maintaining secure 
+coding standards and contributing to peer code reviews across the delivery team. 
+Diagnosed and resolved a recurring dynamic content deployment failure on Azure — scripts failing multiple 
+times weekly due to HTML injection timing issues in the React.js frontend — implementing a Mutation 
+Observer solution that eliminated deployment failures completely and stabilised the release pipeline. 
+ Collaborated within a 6-member team to engineer an AI-powered predictive maintenance platform for 
+industrial fleets using FastAPI microservices, LLaMA 3.2, and a dual RAG pipeline — delivering real-time 
+WebSocket diagnostics in under 2.5 minutes, outperforming competing batch log-processing approaches at an 
+internal hackathon.  
+ Prototyped an AR-powered industrial fleet management system for mining sites using Next.js and React Three 
+Fiber, integrating an LLM-driven safety shutdown sequencer that reduced manual fleet coordination time 
+from 30 minutes to under 5 minutes for blast zone and failure scenarios. 
+ 
+ 
+ Software Developer Intern  ·  CodeClause, Remote Feb 2023 – May 2023 
+ Designed and delivered a full-stack internal Employee Management System using Python and JavaScript — 
+building end-to-end REST API endpoints, frontend interfaces, and backend logic, handing off a complete 
+production-ready build within a 3-month internship. 
+PROJECTS 
+ 
+Integrated Healthcare Monitoring Device with ML Assistance Oct 2023 – Apr 2024 
+ Designed and built a real-time IoT patient monitoring device integrating ML algorithms for early disease 
+detection — merging hardware sensor data with AI diagnostics across multiple vital signs, culminating in a 
+peer-reviewed publication in IJNRD (Nov 2023) on NLP-driven chatbots, IoT, and AWS cloud infrastructure. 
+PUBLICATION 
+ 
+Revolutionizing Healthcare Delivery: A Comprehensive Review of Chatbot-enabled Systems Integrating Real-time 
+Sensor Data and Cloud Computing 
+Co-authored a review paper on a next-gen healthcare model combining chatbot technology, real-time IoT sensor data, 
+and AWS cloud infrastructure. Developed a framework for providing personalized medical assistance using NLP-driven 
+chatbots, real-time health monitoring via IoT devices, and secure data handling through cloud computing.  
+ Key Technologies: NLP, IoT, AWS Cloud, ECC, Time Series Analysis  
+Authors: Sanket Shendge, Atharva Thube, Prerana Vichare, Jyoti Vishwakarma | Journal Name: INTERNATIONAL 
+JOURNAL OF NOVEL RESEARCH AND DEVELOPMENT (IJNRD) | Volume, Issue and Pages: Vol.8 issue 11 November 2023 | 
+Publisher: INTERNATIONAL JOURNAL OF NOVEL RESEARCH AND DEVELOPM ENT (IJNRD)  
+EDUCATION 
+ 
+B.E. Computer Engineering  ·  A.I.S.S.M.S College of Engineering (SPPU), Pune Jun 2024 
+CGPA: 8.75 / 10 
+Diploma in Computer Engineering  ·  Cusrow Wadia Institute of Technology Aug 2021 
+Score: 94.82% 
+CERTIFICATIONS 
+ 
+AWS Certified Cloud Practitioner (2024–2027)  |  Google Certified Associate Cloud Engineer (2025–2028)  |  
+Microsoft Certified: Azure AI Fundamentals (2025)  |  Goethe-Zertifikat A2 (German) 

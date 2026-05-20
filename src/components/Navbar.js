@@ -67,15 +67,15 @@ const Navbar = () => {
         className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-[600px] flex justify-center"
       >
         <div 
-          className={`w-full flex justify-between items-center px-4 py-3 rounded-[50px] transition-all duration-300 ease-in-out border ${
+          className={`w-full flex justify-between items-center px-6 md:px-8 py-3 rounded-[50px] transition-all duration-300 ease-in-out border ${
             scrolled 
               ? 'bg-[rgba(2,6,23,0.75)] backdrop-blur-[16px] border-[rgba(255,255,255,0.08)] shadow-lg' 
               : 'bg-transparent border-transparent'
           }`}
         >
-          {/* Square Logo Initials */}
-          <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-accent text-bg font-sans font-extrabold flex items-center justify-center rounded-md group-hover:bg-accent/80 transition-colors">
+          {/* Circular Logo Initials */}
+          <a href="#home" className="flex items-center gap-2 group flex-shrink-0">
+            <div className="w-9 h-9 bg-accent text-bg font-sans font-extrabold flex items-center justify-center rounded-full group-hover:bg-accent/80 transition-colors">
               SS
             </div>
           </a>
@@ -98,7 +98,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="md:hidden text-text-primary p-2 focus:outline-none"
+            className="md:hidden text-text-primary p-2 focus:outline-none flex-shrink-0"
             onClick={() => setIsMobileMenuOpen(true)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

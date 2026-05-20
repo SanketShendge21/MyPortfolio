@@ -40,7 +40,7 @@ const coreSkills = [
   { name: "Docker", category: "Cloud/DevOps" },
 ];
 
-const learningSkills = ["Agentic AI Workflows", "Distributed Systems", "Vector Databases"];
+const learningSkills = ["Agentic AI Workflows", "LangChain", "Vector Databases"];
 
 const TechIcon = () => (
   <svg className="w-4 h-4 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">

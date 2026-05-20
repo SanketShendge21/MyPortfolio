@@ -40,11 +40,11 @@ const Projects = () => {
                 <div className="h-[3px] w-full bg-gradient-to-r from-accent to-accent-secondary" />
                 
                 <CardHeader className="pb-4">
-                  <div className="flex justify-between items-start mb-2 gap-2">
-                    <CardTitle className="text-2xl font-sans font-bold text-text-primary">
+                  <div className="flex flex-col sm:flex-row sm:justify-between items-start mb-4 gap-3">
+                    <CardTitle className="text-2xl font-sans font-bold text-text-primary leading-tight">
                       {project.name}
                     </CardTitle>
-                    <div className="flex gap-2 flex-shrink-0">
+                    <div className="flex flex-wrap gap-2 flex-shrink-0">
                       {project.publication && (
                         <Badge variant="secondary" className="uppercase tracking-wider text-accent border-accent/30 bg-accent/10">
                           📄 Published
