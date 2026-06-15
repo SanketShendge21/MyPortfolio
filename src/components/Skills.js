@@ -28,6 +28,11 @@ const coreSkills = [
   { name: "LLM Integration", category: "AI / ML" },
   { name: "RAG Pipeline", category: "AI / ML" },
   { name: "NLP", category: "AI / ML" },
+  { name: "PyTorch", category: "AI / ML" },
+  { name: "HuggingFace Transformers", category: "AI / ML" },
+  { name: "ONNX", category: "AI / ML" },
+  { name: "LangChain", category: "AI / ML" },
+  { name: "LangGraph", category: "AI / ML" },
   { name: "Machine Learning", category: "AI / ML" },
   // Databases
   { name: "PostgreSQL", category: "Database" },
@@ -38,6 +43,7 @@ const coreSkills = [
   { name: "GCP", category: "Cloud/DevOps" },
   { name: "Azure", category: "Cloud/DevOps" },
   { name: "Docker", category: "Cloud/DevOps" },
+  { name: "Vercel", category: "Cloud/DevOps" },
 ];
 
 const learningSkills = ["Agentic AI Workflows", "LangChain", "Vector Databases"];

@@ -37,6 +37,18 @@ const Projects = () => {
             >
               <Card className="group h-full flex flex-col bg-card border-border overflow-hidden transition-all duration-300 hover:shadow-hover hover:-translate-y-1">
                 
+                {project.cover && (
+                  <div className="relative w-full h-48 md:h-56 overflow-hidden">
+                    <img 
+                      src={project.cover} 
+                      alt={`${project.name} cover`}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                  </div>
+                )}
+                
                 <div className="h-[3px] w-full bg-gradient-to-r from-accent to-accent-secondary" />
                 
                 <CardHeader className="pb-4">

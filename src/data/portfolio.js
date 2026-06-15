@@ -82,6 +82,17 @@ export const workExperience = [
 
 export const personalProjects = [
   {
+    name: "Marlish.AI",
+    // SITUATION: Google Translate consistently fails on informal Indian chat input (Hinglish/Marlish) — romanized Hindi/Marathi with code-mixing, phonetic variance, and SOV→SVO grammar mismatches.
+    // ACTION: Built a full-stack AI translation platform with a custom 8-layer rule-based NLP pipeline in JavaScript (normalization, intent matching, compound verb assembly, contextual disambiguation, SOV→SVO grammar reordering, confidence scoring) and a Two-Tier Hybrid Architecture: Tier 1 in-browser JS rule engine for instant common translations, Tier 2 NLLB-200 1.3B via GPU-accelerated FastAPI + Gemini GEC post-processing. Curated 18.5M parallel sentence pairs across 8 translation directions.
+    // RESULT: Sub-5ms per-keystroke latency via O(1) dictionary lookups for Tier 1; mT5-small fine-tuned with ONNX INT8 quantization (<40MB) for browser deployment; deployed via Vercel + HF Spaces (Docker/T4 GPU) with PWA offline-first support.
+    description: "Google Translate consistently fails on informal Indian chat input — romanized Hindi/Marathi with code-mixing and phonetic variance. Built a Two-Tier Hybrid Architecture: Tier 1 (in-browser JS rule engine) handles common inputs instantly via a custom 8-layer NLP pipeline with sub-5ms latency; Tier 2 (NLLB-200 1.3B via GPU-accelerated FastAPI + Gemini GEC) handles complex translations. Curated 18.5M parallel sentence pairs and fine-tuned mT5-small with ONNX INT8 quantization (<40MB) for browser deployment.",
+    stack: ["Next.js", "React", "FastAPI", "PyTorch", "NLLB-200", "ONNX", "Gemini API", "Docker"],
+    sourceCode: "https://github.com/SanketShendge21/MarlishAI",
+    cover: "/assets/img/marlishai_cover.png",
+    featured: true,
+  },
+  {
     name: "Healthcare IoT Monitor",
     // SITUATION: Rural clinics lacked real-time multi-vital monitoring, relying on periodic manual checks that delayed early disease detection.
     // ACTION: Designed an IoT device integrating 4 biometric sensors with an ML classification pipeline (Python, time-series analysis) deployed on AWS — published the architecture as a peer-reviewed paper in IJNRD.
