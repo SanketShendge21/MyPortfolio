@@ -100,6 +100,7 @@ export const personalProjects = [
     description: "Rural clinics lacked real-time multi-vital monitoring, relying on periodic manual checks. Designed an IoT device integrating 4 biometric sensors with an ML classification pipeline deployed on AWS for early disease detection. Published peer-reviewed in IJNRD (Nov 2023); enabled real-time anomaly detection across 4 vital signs simultaneously.",
     stack: ["Python", "ML", "IoT", "AWS", "NLP"],
     sourceCode: "https://github.com/SanketShendge21",
+    cover: "/assets/img/healthcare_iot_cover.png",
     featured: true,
     publication: {
       title: "Revolutionizing Healthcare Delivery: A Comprehensive Review of Chatbot-enabled Systems Integrating Real-time Sensor Data and Cloud Computing",
@@ -115,6 +116,7 @@ export const personalProjects = [
     stack: ["Next.js", "MongoDB", "Tailwind CSS"],
     sourceCode: "https://github.com/SanketShendge21/ThreadsUnveiled",
     livePreview: "https://threadsunveiled.vercel.app/",
+    cover: "/assets/img/threads_unveiled_cover.png",
     featured: true,
   },
   {
@@ -125,6 +127,7 @@ export const personalProjects = [
     description: "Users needed a secure, cloud-synced note-taking tool without vendor lock-in. Built a MERN-stack application with JWT auth and encrypted storage, implementing optimistic UI updates to eliminate perceived CRUD latency. Achieved zero-downtime architecture with sub-200ms perceived response on all operations.",
     stack: ["React", "Node.js", "Express", "MongoDB"],
     sourceCode: "https://github.com/SanketShendge21/iNotebook_MERN",
+    cover: "/assets/img/inotebook_cover.png",
     featured: false,
   },
   {
@@ -136,6 +139,7 @@ export const personalProjects = [
     stack: ["React", "CSS", "Algorithms"],
     sourceCode: "https://github.com/SanketShendge21/TextUtils-React",
     livePreview: "https://sanketshendge21.github.io/TextUtils-React/",
+    cover: "/assets/img/textutils_cover.png",
     featured: false,
   },
 ];
